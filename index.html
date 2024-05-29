@@ -40,11 +40,39 @@ lkj
 <a href="2er page.html">Pour retourner a la page initiale</a>
 <p style="background-color: blue;color: white ;">Merci d'etre passe</p>
 
-<p>Telecharger mon <a href="C:\Users\Mister Freze\Documents\0644-le-hacking (1).pdf">mon livre</a></p>
-<P>Voila une photo de <em>EDGE</em>  </P><BR>
+<!-- Conteneur pour le lien de téléchargement dynamique -->
+<p>Télécharger mon <a id="download-link" href="#">livre</a></p>
 
 <img src="wwe-edge-wrestlemania-36-768x433.JPG" alt="EDGE" >
 <P> <a href="#nfc">Remonter en haut</a>    </P>
 <p>Voulez Refermer et aller sur </p><BR> <SPAN> <a style="text-decoration: underline;text-decoration-color: black;color: black;" href="2er page.html">La page 2??</a> </SPAN>
+
+<script>
+	const apiUrl = 'https://nfc-lovat.vercel.app/'; // Remplacez par votre URL d'API
+
+
+
+	// Fonction pour récupérer les données depuis l'API et mettre à jour le lien de téléchargement
+	async function fetchAndDisplayData() {
+		try {
+			const response = await fetch(apiUrl);
+			const data = await response.json();
+
+			// Suppose que l'URL du document est dans une propriété 'documentUrl'
+			const documentUrl = data.documentUrl; // Remplacez par le bon chemin vers l'URL du document
+
+			// Met à jour le lien de téléchargement
+			const downloadLink = document.getElementById('download-link');
+			downloadLink.href = documentUrl;
+		} catch (error) {
+			console.error('Erreur lors de la récupération des données de l\'API:', error);
+		}
+	}
+
+	// Appelez la fonction pour récupérer et afficher les données
+	fetchAndDisplayData();
+
+</script>
+
 </body>
 </html>

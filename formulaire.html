@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Formulaire HTML</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="formulaire_css.css">
+</head>
+<body>
+<h1>
+    Mon formulaire
+</h1>
+<form method="POST" action="nfc.php">
+
+<label for ="cre" >Entre ton nom</label>
+<input type="number" name="cre" id ="moi" min="1" max="45"><br><br>
+
+
+<h3 id="cre">
+    Aimes tu ca? 
+</h3><br>
+<label>Aime tu ca</label><br><br>
+<input type="radio" name ="avis" value="oui" id ="oui">
+<label for ="oui">OUI</label> <BR>
+
+    <input type="radio" name = "avis" value="non" id="non">
+    <label for ="non">NON </label><br>
+
+    <input type="checkbox" name="fer" value="fer" id="fer"> <label for="fer"> Cocher fer</label><br><br>
+    <input type="submit" value="envoi"><br><br>
+
+    <select name="Choisissez">
+        <option value="Chien">Chien</option>
+        <option value="Chat" selected="selected">Chat</option>
+        <option value="Perroquet">Perroquet</option>
+    </select>
+<br><br>
+<select name="Choisissez" id="dre">
+
+    <optgroup label="Animal">
+        <option value="Chien">Chien</option>
+        <option value="Perroquet" selected="selected">Perroquet</option>
+        <option value="Chat">Chat</option>
+    </optgroup>
+
+    <optgroup label="Pays">
+        <option value="Chine">Chine</option>
+        <option value="Portugal" selected="selected">Portugal</option>
+        <option value="Colombie">Colombie</option>
+    </optgroup>
+
+</select>
+    
+
+
+
+
+
+</form>
+
+
+</body>
+</html>

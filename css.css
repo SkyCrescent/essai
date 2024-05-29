@@ -1,0 +1,16 @@
+
+		.n1{
+			color: silver;
+			text-align: center;
+			text-decoration: underline;
+			text-transform: capitalize;
+		}
+		body
+		{
+			color: blue;
+		}
+		mark
+		{
+			color: white ;
+			background-color: black;
+		}

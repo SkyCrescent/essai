@@ -1,0 +1,10 @@
+h1,h2
+{
+	color: silver;
+	text-align: center;
+	font-size: 15000 ;
+}
+p
+{
+	text-transform: capitalize;
+}
